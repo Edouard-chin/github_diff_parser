@@ -3,6 +3,18 @@
 require "test_helper"
 
 class GithubDiffParserTest < Minitest::Test
+  def test_boom1
+    refute(true)
+  end
+
+  def test_boom2
+    assert(false)
+  end
+
+  def test_boom3
+    flunk
+  end
+
   def test_line_added
     parsed_diffs = GithubDiffParser.parse(read_diff("line_added"))
     assert_equal(1, parsed_diffs.count)

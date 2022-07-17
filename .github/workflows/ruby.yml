@@ -7,11 +7,7 @@
 
 name: Ruby
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+on: [push, pull_request]
 
 permissions:
   contents: read
@@ -38,4 +34,3 @@ jobs:
       run: bundle exec rake
     - name: Ruby Lint
       run: bundle exec rubocop
-      
